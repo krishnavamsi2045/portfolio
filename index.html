@@ -1,186 +1,141 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mandala Krishna Vamsi | Cybersecurity Portfolio</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+```
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
 
-    <!-- Hacker Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome (Icons) -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<!-- Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+```
+
 </head>
 <body>
 
-    <!-- MATRIX BACKGROUND -->
-    <canvas id="matrix"></canvas>
+```
+<!-- Matrix Background -->
+<canvas id="matrix"></canvas>
 
-    <!-- NAVBAR (NAME ON LEFT SIDE) -->
-    <header class="header">
-        <nav class="navbar">
-            <!-- LEFT SIDE NAME (UPDATED) -->
-            <h2 class="logo">MANDALA KRISHNA VAMSI</h2>
+<!-- Navbar -->
+<header class="header">
+    <nav class="navbar">
+        <h2 class="logo">MANDALA KRISHNA VAMSI</h2>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
-            <!-- RIGHT SIDE MENU -->
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+    <div class="hero-container">
 
-    <!-- HERO SECTION -->
-    <section id="home" class="hero">
+        <!-- Profile Image -->
+        <div class="profile-box">
+            <img src="profile.png" alt="Mandala Krishna Vamsi" class="profile-img">
+        </div>
+
+        <!-- Hero Content -->
         <div class="hero-content">
-
-            <!-- PROFILE IMAGE (FIXED FOR profile.png) -->
-            <img src="profile.png" alt="Mandala Krishna Vamsi" class="hero-img">
-
-            <h1>
-                Hi, I'm 
-                <span class="highlight">Mandala Krishna Vamsi</span>
-            </h1>
-
-            <!-- TYPING ANIMATION TEXT -->
-            <h3 id="typing"></h3>
+            <h1>Hi, I'm <span class="highlight">Mandala Krishna Vamsi</span></h1>
+            <h2 class="typing-text" id="typing"></h2>
 
             <p class="hero-desc">
                 B.Tech CSE (Cybersecurity) Student at Presidency University | 
-                Ethical Hacking | SOC | Cloud Security
+                Ethical Hacking | SOC | Cloud Security | Penetration Testing
             </p>
 
             <div class="hero-buttons">
-                <a href="#projects" class="btn">View Projects</a>
-                <a href="#contact" class="btn">Hire Me</a>
-            </div>
+                <a href="MANDALA_KRISHNA_VAMSI_RESUME.pdf" class="btn" target="_blank">
+                    <i class="fas fa-file-download"></i> View Resume
+                </a>
 
+                <a href="#contact" class="btn outline">
+                    <i class="fas fa-user-secret"></i> Hire Me
+                </a>
+            </div>
         </div>
-    </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>
-            I am a B.Tech Computer Science (Cybersecurity) student at Presidency University 
-            with a strong interest in Ethical Hacking, Network Security, and Cloud Security. 
-            I have hands-on experience with Arduino IoT projects and cybersecurity tools 
-            like Nmap, Wireshark, and Burp Suite.
-        </p>
+    </div>
+</section>
 
-        <p>
-            I am actively learning Ethical Hacking, Web Security, and Penetration Testing 
-            and looking for internship opportunities in Cybersecurity, SOC, and Ethical 
-            Hacking domains.
-        </p>
+<!-- ABOUT -->
+<section id="about" class="section">
+    <h2 class="section-title">About Me</h2>
+    <p>
+        I am a B.Tech Computer Science (Cybersecurity) student at Presidency University (2023–2027) 
+        with strong interest in Ethical Hacking, Network Security, and Cloud Security. 
+        I have hands-on experience with Arduino IoT projects and cybersecurity tools like 
+        Nmap, Wireshark, and Burp Suite. Currently seeking Cybersecurity & SOC internships.
+    </p>
+    <p class="cgpa">CGPA: 6.5 (Current)</p>
+</section>
 
-        <p><strong>CGPA:</strong> 6.5 (Current)</p>
-    </section>
+<!-- SKILLS -->
+<section id="skills" class="section dark">
+    <h2 class="section-title">Cyber Skills</h2>
+    <div class="skills-grid">
+        <div class="skill">Ethical Hacking</div>
+        <div class="skill">Nmap</div>
+        <div class="skill">Wireshark</div>
+        <div class="skill">Burp Suite</div>
+        <div class="skill">Kali Linux</div>
+        <div class="skill">Python</div>
+        <div class="skill">Java</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Web Security</div>
+        <div class="skill">Arduino IoT</div>
+    </div>
+</section>
 
-    <!-- SKILLS SECTION -->
-    <section id="skills" class="section dark">
-        <h2>My Skills</h2>
-        <div class="card-container">
-            <div class="card">Ethical Hacking</div>
-            <div class="card">Network Security</div>
-            <div class="card">Burp Suite</div>
-            <div class="card">Wireshark</div>
-            <div class="card">Nmap</div>
-            <div class="card">Kali Linux</div>
-            <div class="card">Cloud Security</div>
-            <div class="card">Python</div>
-            <div class="card">Arduino (IoT)</div>
-            <div class="card">Web Security</div>
+<!-- PROJECTS -->
+<section id="projects" class="section">
+    <h2 class="section-title">Projects</h2>
+    <div class="project-grid">
+        <div class="project-card">
+            <h3>Temperature & Humidity Monitoring</h3>
+            <p>Arduino-based IoT system for real-time environmental monitoring.</p>
         </div>
-    </section>
 
-    <!-- PROJECTS SECTION -->
-    <section id="projects" class="section">
-        <h2>My Projects</h2>
-        <div class="card-container">
-
-            <div class="project-card">
-                <h3>Temperature & Humidity Monitoring System</h3>
-                <p>
-                    Built using Arduino sensors to monitor real-time temperature 
-                    and humidity data with IoT integration.
-                </p>
-            </div>
-
-            <div class="project-card">
-                <h3>Water Level Detection System</h3>
-                <p>
-                    IoT-based project to measure water depth and alert users 
-                    when water level rises using sensors and microcontroller.
-                </p>
-            </div>
-
+        <div class="project-card">
+            <h3>Water Level Detection System</h3>
+            <p>IoT project to measure water depth and alert on rising levels.</p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CERTIFICATES SECTION -->
-    <section id="certificates" class="section dark">
-        <h2>My Certifications</h2>
-        <div class="card-container">
+<!-- CONTACT -->
+<section id="contact" class="section dark">
+    <h2 class="section-title">Contact</h2>
+    <p><i class="fas fa-envelope"></i> vamsimandala20@gmail.com</p>
+    <p><i class="fas fa-phone"></i> +91 9346015719</p>
+    <p><i class="fas fa-map-marker-alt"></i> Bengaluru, India</p>
 
-            <div class="cert-card">
-                <h3>Oracle Cloud Infrastructure AI Foundations Associate</h3>
-                <p>Oracle University | 2025</p>
-            </div>
+    <div class="social">
+        <a href="https://github.com/krishnavamsi2045" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/mandala-krishna-vamsi-3174b923b" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://instagram.com/vamsi.dc" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+</section>
 
-            <div class="cert-card">
-                <h3>Deloitte Cybersecurity Job Simulation</h3>
-                <p>Forage | Risk Assessment & Security Analysis</p>
-            </div>
+<footer>
+    <p>© 2027 Mandala Krishna Vamsi | Cybersecurity Portfolio</p>
+</footer>
 
-            <div class="cert-card">
-                <h3>Tata Cybersecurity Analyst Job Simulation</h3>
-                <p>IAM Fundamentals & Security Concepts</p>
-            </div>
-
-            <div class="cert-card">
-                <h3>Cybersecurity MOOC – CySeck</h3>
-                <p>Foundation in Cybersecurity Concepts</p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" class="section">
-        <h2>Contact Me</h2>
-
-        <p><i class="fas fa-envelope"></i> vamsimandala20@gmail.com</p>
-        <p><i class="fas fa-phone"></i> +91 9346015719</p>
-        <p><i class="fas fa-map-marker-alt"></i> Bengaluru, India</p>
-
-        <div class="social">
-            <a href="https://github.com/krishnavamsi2045" target="_blank">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/mandala-krishna-vamsi-3174b923b" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://instagram.com/vamsi.dc" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Mandala Krishna Vamsi | Cybersecurity Portfolio</p>
-    </footer>
-
-    <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
+<script src="script.js"></script>
+```
 
 </body>
 </html>
