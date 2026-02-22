@@ -1,32 +1,46 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    background: #0f172a;
-    color: white;
+    font-family: 'Orbitron', sans-serif;
+    background: black;
+    color: #00ff9c;
+    overflow-x: hidden;
 }
 
-.header {
+/* Matrix Background Canvas */
+#matrix {
     position: fixed;
-    width: 100%;
     top: 0;
-    background: #020617;
-    padding: 15px 50px;
-    z-index: 1000;
+    left: 0;
+    z-index: -1;
 }
 
-.logo {
-    color: #00f2ff;
+/* Navbar */
+.header {
+    background: rgba(0,0,0,0.8);
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #00ff9c;
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo {
+    color: #00ff9c;
+    font-size: 24px;
+    text-shadow: 0 0 10px #00ff9c;
 }
 
 .nav-links {
@@ -36,91 +50,124 @@ body {
 }
 
 .nav-links a {
+    color: #00ff9c;
     text-decoration: none;
-    color: white;
     transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: #00f2ff;
+    color: white;
+    text-shadow: 0 0 10px #00ff9c;
 }
 
+/* Hero Section */
 .hero {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(135deg, #020617, #0f172a);
 }
 
+.hero-content {
+    animation: fadeIn 2s ease-in;
+}
+
+/* Profile Image (Hacker Glow) */
 .hero-img {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    border: 4px solid #00f2ff;
+    border: 3px solid #00ff9c;
+    box-shadow: 0 0 30px #00ff9c;
     margin-bottom: 20px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.hero-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 60px #00ff9c;
 }
 
 .highlight {
-    color: #00f2ff;
+    color: #00ff9c;
+    text-shadow: 0 0 15px #00ff9c;
 }
 
 .btn {
     display: inline-block;
     margin-top: 15px;
-    padding: 10px 25px;
-    background: #00f2ff;
-    color: black;
-    border-radius: 25px;
+    padding: 12px 30px;
+    border: 2px solid #00ff9c;
+    color: #00ff9c;
     text-decoration: none;
-    font-weight: bold;
+    transition: 0.3s;
 }
 
+.btn:hover {
+    background: #00ff9c;
+    color: black;
+    box-shadow: 0 0 20px #00ff9c;
+}
+
+/* Sections */
 .section {
-    padding: 100px 50px;
+    padding: 80px 10%;
     text-align: center;
 }
 
 .dark {
-    background: #020617;
+    background: #020202;
 }
 
+h2 {
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px #00ff9c;
+}
+
+/* Cards */
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
 
 .card, .project-card, .cert-card {
-    background: #0f172a;
+    background: #010101;
+    border: 1px solid #00ff9c;
     padding: 20px;
     border-radius: 10px;
-    width: 250px;
-    border: 1px solid #1e293b;
     transition: 0.3s;
 }
 
 .card:hover, .project-card:hover, .cert-card:hover {
     transform: translateY(-8px);
-    border-color: #00f2ff;
-    box-shadow: 0 10px 25px rgba(0,242,255,0.3);
+    box-shadow: 0 0 20px #00ff9c;
 }
 
+/* Social Icons */
 .social a {
+    font-size: 24px;
     margin: 10px;
-    font-size: 25px;
-    color: white;
+    color: #00ff9c;
     transition: 0.3s;
 }
 
 .social a:hover {
-    color: #00f2ff;
+    color: white;
+    text-shadow: 0 0 15px #00ff9c;
 }
 
+/* Footer */
 footer {
-    background: #020617;
-    padding: 20px;
     text-align: center;
+    padding: 20px;
+    border-top: 1px solid #00ff9c;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
 }
