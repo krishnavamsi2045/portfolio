@@ -1,38 +1,28 @@
-// HACKER TERMINAL LOADING (FIXED FOR VAMSI)
-document.addEventListener('DOMContentLoaded', () => {
-    const loadingContainer = document.getElementById('loading');
+// HACKER TYPING LOADER (NO ERRORS)
+document.addEventListener("DOMContentLoaded", function () {
 
-    // Terminal UI
-    loadingContainer.innerHTML = `
-        <div class="terminal-text">
-            <span style="color:#00ff9c;">vamsi@cybersec</span>:~$ 
-            <span id="typed-command"></span>
-            <span class="terminal-cursor"></span>
-        </div>
-    `;
-
-    const typedCommand = document.getElementById('typed-command');
-
-    // 🔥 YOUR NAME HERE (EDITABLE)
-    const text = "cd ~/vamsi-portfolio";
+    const text = "cd ~/vamsis-portfolio && access granted";
+    const typedText = document.getElementById("typed-text");
+    const loader = document.getElementById("loading");
 
     let index = 0;
 
     function typeEffect() {
         if (index < text.length) {
-            typedCommand.textContent += text.charAt(index);
+            typedText.textContent += text.charAt(index);
             index++;
-            setTimeout(typeEffect, 70);
+            setTimeout(typeEffect, 60);
         } else {
-            // Fade out loading screen
             setTimeout(() => {
-                loadingContainer.style.opacity = "0";
+                loader.style.opacity = "0";
+                loader.style.transition = "opacity 0.8s ease";
                 setTimeout(() => {
-                    loadingContainer.style.display = "none";
-                }, 600);
-            }, 800);
+                    loader.style.display = "none";
+                }, 800);
+            }, 1200);
         }
     }
 
+    // Start typing
     setTimeout(typeEffect, 500);
 });
