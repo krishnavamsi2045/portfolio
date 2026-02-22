@@ -1,4 +1,4 @@
-# portfolio# 👋 Hi, I'm Mandala Krishna Vamsi
+# 👋 Hi, I'm Mandala Krishna Vamsi
 
 🎓 B.Tech CSE (Cybersecurity) Student at Presidency University  
 🔐 Aspiring Ethical Hacker | Cybersecurity Enthusiast  
