@@ -1,34 +1,38 @@
-document.addEventListener("DOMContentLoaded", () => {
+// HACKER TERMINAL LOADING (FIXED FOR VAMSI)
+document.addEventListener('DOMContentLoaded', () => {
+    const loadingContainer = document.getElementById('loading');
 
-const loader = document.getElementById("loading");
+    // Terminal UI
+    loadingContainer.innerHTML = `
+        <div class="terminal-text">
+            <span style="color:#00ff9c;">vamsi@cybersec</span>:~$ 
+            <span id="typed-command"></span>
+            <span class="terminal-cursor"></span>
+        </div>
+    `;
 
-loader.innerHTML = `
-<div class="terminal-text">
-<span>bash$ cd ~/vamsi-portfolio</span>
-<span class="terminal-cursor"></span>
-</div>
-`;
+    const typedCommand = document.getElementById('typed-command');
 
-setTimeout(() => {
-    loader.style.opacity = "0";
-    setTimeout(() => loader.style.display = "none", 500);
-}, 2000);
+    // 🔥 YOUR NAME HERE (EDITABLE)
+    const text = "cd ~/vamsi-portfolio";
 
-// GSAP Animations (SAFE)
-const heroTitle = document.getElementById("hero-title");
-const heroSubtitle = document.getElementById("hero-subtitle");
+    let index = 0;
 
-gsap.to(heroTitle, {opacity:1, y:0, duration:1});
-gsap.to(heroSubtitle, {opacity:1, y:0, duration:1, delay:0.5});
+    function typeEffect() {
+        if (index < text.length) {
+            typedCommand.textContent += text.charAt(index);
+            index++;
+            setTimeout(typeEffect, 70);
+        } else {
+            // Fade out loading screen
+            setTimeout(() => {
+                loadingContainer.style.opacity = "0";
+                setTimeout(() => {
+                    loadingContainer.style.display = "none";
+                }, 600);
+            }, 800);
+        }
+    }
 
-// Particles Background
-particlesJS("particles-js", {
-particles: {
-number: { value: 60 },
-color: { value: "#00ff9c" },
-size: { value: 3 },
-move: { speed: 2 }
-}
-});
-
+    setTimeout(typeEffect, 500);
 });
