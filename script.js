@@ -234,17 +234,18 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 
- /* ── BOOT ── */
-function initPage() {
-  initCanvas();
-  initRoles();
-  initCursor();
-  initNavbar();
-  initReveal();
-  initHeroAnimations(); 
-  initSmoothScroll();   
-  initForm();           
-}
+  /* ── BOOT ── */
+  function initPage() {
+    initCanvas();
+    initRoles();
+    initCursor();
+    initNavbar();
+    initReveal();
+    initHeroAnimations();
+    initSmoothScroll();
+    initForm();
+  }
 
-/* Start app */
-initPage();
+  /* initPage() is called ONLY by dismissLoader() above — do NOT call it here again */
+
+}); /* end DOMContentLoaded */
