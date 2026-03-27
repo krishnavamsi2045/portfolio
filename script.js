@@ -234,16 +234,17 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 
-  /* ── BOOT ── */
-  function initPage() {
-    initCanvas();
-    initRoles();
-    initCursor();
-    initNavbar();
-    initReveal();
-    initHeroAnimations();
-    initSmoothScroll();
-    initForm();
-  }
+ /* ── BOOT ── */
+function initPage() {
+  initCanvas();
+  initRoles();
+  initCursor();
+  initNavbar();
+  initReveal();
+  initHeroAnimations(); 
+  initSmoothScroll();   
+  initForm();           
+}
 
-});
+/* Start app */
+initPage();
